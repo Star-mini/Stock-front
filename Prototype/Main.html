@@ -1,107 +1,84 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Nvidia Stock Analysis</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto auto 1fr;
-            gap: 20px;
-            padding: 20px;
-            max-width: 1300px;
+            width: 800px;
             margin: 0 auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
         }
-        .header, .footer {
-            grid-column: span 2;
+        .header, .section {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .rating {
+            text-align: right;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .box-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .box {
+            width: 30%;
+            height: 100px;
+            border: 1px solid #000;
             text-align: center;
             padding: 20px;
-            background-color: #e4e4e4;
-            border-radius: 8px;
-        }
-        .card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .graph {
-            height: 200px;
-            background-color: #e4e4e4;
-            border-radius: 8px;
-        }
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table th, .table td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 헤더 섹션 -->
         <div class="header">
-            <h1>Nvidia</h1>
+            <div class="logo">
+                Nvidia
+            </div>
+            <div class="rating">
+                <div>🏆 4.23</div>
+                <div>analyst rating 4.23</div>
+                <div>Symbol: NVDA</div>
+            </div>
         </div>
-        <div class="card">
-            <h2>Votem?</h2>
-            <p>19.90</p>
-            <p>Other details...</p>
+        
+        <!-- Fundamental 섹션 -->
+        <div class="section">
+            <div class="section-title">Fundamental</div>
+            <div class="box-container">
+                <div class="box">profitability</div>
+                <div class="box">stability</div>
+                <div class="box">market trends</div>
+            </div>
         </div>
-        <div class="card">
-            <h2>Potoremce</h2>
-            <p>2.46</p>
-        </div>
-        <div class="card">
-            <h2>Otvonon</h2>
-            <p>Details here...</p>
-        </div>
-        <div class="card">
-            <h2>Performance</h2>
-            <div class="graph"></div>
-        </div>
-        <div class="card">
-            <h2>Overview</h2>
-            <div class="graph"></div>
-        </div>
-        <div class="card">
-            <h2>Data Table</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Item 1</td>
-                        <td>Value 1</td>
-                    </tr>
-                    <tr>
-                        <td>Item 2</td>
-                        <td>Value 2</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-        </div>
-        <div class="footer">
-            <p>Footer content here</p>
+        
+        <!-- Recommend 섹션 -->
+        <div class="section">
+            <div class="section-title">Recommend</div>
+            <div class="box-container">
+                <div class="box">sector</div>
+                <div class="box">company</div>
+                <div class="box">Recommendations from securities companies</div>
+            </div>
         </div>
     </div>
 </body>
